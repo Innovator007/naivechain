@@ -139,7 +139,7 @@ var connectToPeers = (newPeers) => {
         var ws = new WebSocket(peer);
         ws.on('open', () => initConnection(ws));
         ws.on('error', () => {
-            console.log('connection failed')
+            console.log('connection failed to peer: ' + peer);
         });
     });
 };
